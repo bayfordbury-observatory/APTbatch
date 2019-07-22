@@ -6,7 +6,7 @@ SourceLists.py then extracts specific sources from those APT source lists (a tar
 
 Can be used to creating light curves of exoplanet transits, asteroid, variable stars... etc
 
-##APTbatch.py
+## APTbatch.py
 
 - You must first run APT on a single image to set up the photometry settings (photometry mode, aperture and sky annulus size)
 
@@ -24,7 +24,7 @@ Now run the script ("python APTbatch.py")
 
 - APT will be run for each image and a corresponding .tbl source list will be created in the image directory
 
-##SourceLists.py
+## SourceLists.py
 
 You now have the magnitude of every single source (stars, asteroids..etc) in every image, but in most cases you are only interested in a few sources.
 This script will extract only a few chosen sources (a target, reference, and one or two check stars), and output them into a single file with the Julian date.
