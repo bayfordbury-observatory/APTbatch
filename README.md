@@ -37,7 +37,7 @@ Several variables must first be changed before running the script:
 
 - The coordinates of a reference star (pick a bright star nearby for maximum SNR, but ensure it does not saturate - for 16 bit cameras the peak pixel value should remain <45k)
 
-- Coordinates of a check star, choose as in the same was as the reference.
+- Coordinates of a check star, choose as for the reference.
 
 - Coordinates of a second check star if desired.
 
