@@ -41,7 +41,7 @@ Several variables must first be changed before running the script:
 
 - Coordinates of a second check star if desired.
 
-- Maximum permissable distance for a source to be counted as the one you want (1-2 arcseconds is a good range)
+- Maximum permissable distance for a source to be accepted as correct (1-2 arcseconds is a good range)
 
 - The filename of the output list
 
