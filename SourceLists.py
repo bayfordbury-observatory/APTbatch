@@ -17,8 +17,6 @@ directory = r"C:\Users\David\Documents\apt tests\Transit 1"
 RA_target_1 = 129.328754
 DEC_target_1 = 16.082509
 
-
-
 #The right ascension and declination of the reference star (decimal degrees)
 RA_reference = 129.439444
 DEC_reference = 16.027707
@@ -257,3 +255,5 @@ for n in range(i):
 
 #Close the output
 f.close() 
+
+print("Done!")
