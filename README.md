@@ -1,10 +1,10 @@
 # APT Batch
 
-APTbatch.py runs Aperture Photometry Tool (APT) to create a source list for every FITS file in a directory
+APTbatch.py runs Aperture Photometry Tool (APT) automatically to create a source list for every FITS file in a directory
 
 SourceLists.py then extracts specific sources from those APT source lists (a target, reference, and one or two check stars)
 
-Can be used to creating light curves of exoplanet transits, asteroid, variable stars... etc
+It can be used for quickly creating light curves of exoplanet transits, asteroid, variable stars... etc
 
 ## APTbatch.py
 
@@ -12,7 +12,7 @@ Can be used to creating light curves of exoplanet transits, asteroid, variable s
 
 - Next export these settings as a preference file (File > Preferences > Save Preferences)
 
-Three variables must be edited in the script before use
+Three variables must be edited in the script before use:
 
 - The directory containing your FITS files to be processed
 
@@ -45,7 +45,7 @@ Several variables must first be changed before running the script:
 
 - The filename of the output list
 
-If your target it moving (a comet or asteroid) you must also specify 
+If your target is moving (a comet or asteroid) you must also specify 
 
 - A second set of coordinates taken at a later time
 
