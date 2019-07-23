@@ -17,7 +17,7 @@ directory = r"C:\Users\David\Documents\apt tests\Transit 1"
 aptJar = r"C:\APT\APT.jar"
 
 #Location of the exported APT preferences file (you must set up the photometry settings in APT first)
-preferences = "APT.pref"
+preferences = r"C:\Users\David\Documents\apt tests\Transit 1\APT.pref"
 
 
 #---------------------------------------------------------------------------------------------------

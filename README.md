@@ -4,7 +4,7 @@ APTbatch.py runs Aperture Photometry Tool (APT) automatically to create a source
 
 SourceLists.py then extracts specific sources from those APT source lists (a target, reference, and one or two check stars)
 
-It can be used for quickly creating light curves of exoplanet transits, asteroid, variable stars... etc
+It can be used for quickly creating light curves of exoplanet transits, asteroid, variable stars... etc including uncertainties.
 
 ## APTbatch.py
 
