@@ -11,13 +11,13 @@ import os
 
 
 #Directory containing the FITS images you want processed
-directory = r"C:\Users\David\Documents\apt tests\Transit 1"
+directory = r"C:\Users\Public\Documents\Practicals\Exoplanets\HAT-P-20\Transit 1"
 
 #Location of the APT.jar file
 aptJar = r"C:\Program Files (x86)\APT\APT.jar" #Uncomment this line and Comment the above line wPMB PCs
 
 #Location of the exported APT preferences file (you must set up the photometry settings in APT first)
-preferences = r"C:\Users\David\Documents\apt tests\Transit 1\APT.pref"
+preferences = r"C:\Docs\APT.pref"
 
 
 #---------------------------------------------------------------------------------------------------
