@@ -14,12 +14,12 @@ from astropy.io import fits
 directory = r"C:\Users\David\Documents\apt tests\Transit 1"
 
 #The right ascension and declination of your target (decimal degrees)
-RA_target_1 = 129.328754
-DEC_target_1 = 16.082509
+RA_target_1 = 348.993258
+DEC_target_1 = 31.462775
 
 #The right ascension and declination of the reference star (decimal degrees)
-RA_reference = 129.439444
-DEC_reference = 16.027707
+RA_reference = 349.092426
+DEC_reference = 31.527323
 
 #The right ascension and declination of the check star/s (decimal degrees)
 RA_check_1 = 349.100001
@@ -36,7 +36,7 @@ maxDist = 2
 listFile = "Transit 1.csv"
 
 #Is the target moving? (True or False)
-movingTarget = True
+movingTarget = False
 
 #If so, also edit the following:
 
