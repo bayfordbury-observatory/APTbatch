@@ -44,7 +44,7 @@ movingTarget = False
 RA_target_2 = 129.360391
 DEC_target_2 = 16.072311
 
-#Julian date at the first and last point (decimal degrees)
+#Julian date at the first and last point (decimal days)
 JD_1 = 2458174.5500694443
 JD_2 = 2458174.3645023149
 
