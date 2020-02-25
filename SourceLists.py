@@ -11,7 +11,7 @@ from astropy.io import fits
 #-----------Variables to be customised before use-----------------------------------------------------
 
 #Directory containing the FITs files and .tbl source lists from APT
-directory = r"C:\Users\David\Documents\apt tests\Transit 1"
+directory = r"C:\Users\Public\Documents\Practicals\Exoplanets\HAT-P-20\Transit 1"
 
 #The right ascension and declination of your target (decimal degrees)
 RA_target_1 = 348.993258

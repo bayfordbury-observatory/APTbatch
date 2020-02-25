@@ -37,6 +37,10 @@ for filename in os.listdir(directory):
 		
 		#name of the output table file (source list)
 		ofile = os.path.join(directory, os.path.splitext(filename)[0]+".tbl")
+		
+		#remove any previous output files to write new data
+		if os.path.exists(ofile):
+			os.remove(ofile)
 	
 		#parameters to feed APT
 		parameters = "-i \"" + file + "\" -s sourceListByAPT -o \"" + ofile + "\" "
