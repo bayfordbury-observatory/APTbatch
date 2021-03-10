@@ -15,7 +15,7 @@ import os
 directory = r"C:\Users\Public\Documents\Practicals\Exoplanets\HAT-P-20\Transit 1"
 
 #Location of the APT.jar file
-aptJar = r"C:\ProgramData\APT_v2.8.3\APT_v2.8.3\APT.jar" #Specific location for PMB PCs
+aptJar = r"C:\ProgramData\APT_v2.8.3\APT_v2.8.3\APT.jar" #Specific location for APT on LRC machines in March 2021
 
 #Location of the exported APT preferences file (you must set up the photometry settings in APT first)
 preferences = r"C:\Users\David\Documents\apt tests\Transit 1\APT.pref"
@@ -46,8 +46,7 @@ for filename in os.listdir(directory):
 		#parameters to feed APT
 		parameters = "-i \"" + file + "\" -s sourceListByAPT -o \"" + ofile + "\" "
 		
-		#Call APT (specific location on LRC PCs) 
-		
+		#Call APT (specific batch script on LRC PCs) 		
 		subprocess.call(["APT-LRC.bat", "-i", file, "-p", preferences, "-s", "sourceListByAPT", "-o", ofile])
 		
 		continue
