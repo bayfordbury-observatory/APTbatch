@@ -46,7 +46,7 @@ for filename in os.listdir(directory):
 		parameters = "-i \"" + file + "\" -s sourceListByAPT -o \"" + ofile + "\" "
 		
 		#Call APT (specific location on PMB PCs) 
-		subprocess.call(["C:/Program Files (x86)/Java/jre1.8.0/bin/java.exe", "-Duser.language=en", "-Duser.region=US", "-mx1024M", "-jar", aptJar, "-i", file, "-p", preferences, "-s", "sourceListByAPT", "-o", ofile])
+		subprocess.call(["C:/Program Files (x86)/Java/jre1.8.0_291/bin/java.exe", "-Duser.language=en", "-Duser.region=US", "-mx1024M", "-jar", aptJar, "-i", file, "-p", preferences, "-s", "sourceListByAPT", "-o", ofile])
 		
 		continue
 	else:
