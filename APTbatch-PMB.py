@@ -14,7 +14,7 @@ import os
 directory = r"C:\Users\Public\Documents\Practicals\Exoplanets\HAT-P-20\Transit 1"
 
 #Location of the APT.jar file
-aptJar = r"C:\ProgramData\APT_v2.8.4\APT.jar" #Specific location for PMB PCs
+aptJar = r"C:\programFiles\APT_v3.0.8\APT.jar" #Specific location for PMB PCs
 
 #Location of the exported APT preferences file (you must set up the photometry settings in APT first)
 preferences = r"C:\Docs\APT.pref"
@@ -46,7 +46,7 @@ for filename in os.listdir(directory):
 		parameters = "-i \"" + file + "\" -s sourceListByAPT -o \"" + ofile + "\" "
 		
 		#Call APT (specific location on PMB PCs) 
-		subprocess.call(["C:/Program Files (x86)/Java/jre1.8.0_291/bin/java.exe", "-Duser.language=en", "-Duser.region=US", "-mx1024M", "-jar", aptJar, "-i", file, "-p", preferences, "-s", "sourceListByAPT", "-o", ofile])
+		subprocess.call(["C:/Program Files/OpenJDK/jdk-18.0.1.1/bin/java.exe", "-Duser.language=en", "-Duser.region=US", "-mx1024M", "-jar", aptJar, "-i", file, "-p", preferences, "-s", "sourceListByAPT", "-o", ofile])
 		
 		continue
 	else:
