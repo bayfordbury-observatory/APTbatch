@@ -163,76 +163,78 @@ for filename in os.listdir(directory):
 					#Ignore the last line
 					if parts[0]!="End":
 					
-						#Extract useful values from the source list
-						ra = float(parts[3]) 	#Right ascensions (degrees)
-						dec = float(parts[4]) 	#Declination (degrees)
-						Intensity = parts[10]	#Source intensity
-						dIntensity = parts[12]	#Intensity uncertainty
-						mag = parts[14]			#Source instrument magnitude
-						dmag = parts[15]		#magnitude uncertainty
-						fwhm = parts[35]		#Full width half maximum
-						
-						#Values to output
-						output_string =Intensity+","+dIntensity+","+mag+","+dmag
+						if parts[3] is not None and parts[4] is not None:
+							
+							#Extract useful values from the source list
+							ra = float(parts[3]) 	#Right ascensions (degrees)
+							dec = float(parts[4]) 	#Declination (degrees)
+							Intensity = parts[10]	#Source intensity
+							dIntensity = parts[12]	#Intensity uncertainty
+							mag = parts[14]			#Source instrument magnitude
+							dmag = parts[15]		#magnitude uncertainty
+							fwhm = parts[35]		#Full width half maximum
+							
+							#Values to output
+							output_string =Intensity+","+dIntensity+","+mag+","+dmag
+									
+							#Convert the coordinates to radians		
+							ra1 = math.radians(RA_target)
+							ra2 = math.radians(ra)
+							d1 = math.radians(DEC_target)
+							d2 = math.radians(dec)			
+							
+							#Calculate the distance from this source to the target
+							angSep = 3600*math.degrees(math.acos(math.sin(d1)*math.sin(d2)+math.cos(d1)*math.cos(d2)*math.cos(ra1-ra2)))
 								
-						#Convert the coordinates to radians		
-						ra1 = math.radians(RA_target)
-						ra2 = math.radians(ra)
-						d1 = math.radians(DEC_target)
-						d2 = math.radians(dec)			
-						
-						#Calculate the distance from this source to the target
-						angSep = 3600*math.degrees(math.acos(math.sin(d1)*math.sin(d2)+math.cos(d1)*math.cos(d2)*math.cos(ra1-ra2)))
+							#If it's close enough, and closer than the closest source so far, make it the new best source
+							if angSep < maxDist and angSep<closestTarget:
 							
-						#If it's close enough, and closer than the closest source so far, make it the new best source
-						if angSep < maxDist and angSep<closestTarget:
-						
-							closestTarget = angSep
-							list[i][1]=closestTarget
-							list[i][2]=output_string
-						
-						#Convert the coordinates to radians	
-						ra1 = math.radians(RA_reference)
-						d1 = math.radians(DEC_reference)
-						
-						#calculate the distance from this source to the reference star
-						angSep = 3600*math.degrees(math.acos(math.sin(d1)*math.sin(d2)+math.cos(d1)*math.cos(d2)*math.cos(ra1-ra2)))
-											
-						#If it's close enough, and closer than the closest source so far, make it the new best source
-						if angSep < maxDist and angSep<closestRef:
-							closestRef = angSep
-							list[i][1]=closestRef
-							list[i][3]=output_string	
+								closestTarget = angSep
+								list[i][1]=closestTarget
+								list[i][2]=output_string
 							
-						#Convert the coordinates to radians	
-						ra1 = math.radians(RA_check_1)
-						d1 = math.radians(DEC_check_1)
-						
-						#calculate the distance from this source to the check star
-						angSep = 3600*math.degrees(math.acos(math.sin(d1)*math.sin(d2)+math.cos(d1)*math.cos(d2)*math.cos(ra1-ra2)))
-											
-						#If it's close enough, and closer than the closest source so far, make it the new best source
-						if angSep < maxDist and angSep<closestCheck1:
-							closestCheck1 = angSep
-							list[i][1]=closestCheck1
-							list[i][4]=output_string	
-						
-						#If there's a second check star
-						if RA_check_2 is not None:
-						
 							#Convert the coordinates to radians	
-							ra1 = math.radians(RA_check_2)
-							d1 = math.radians(DEC_check_2)
+							ra1 = math.radians(RA_reference)
+							d1 = math.radians(DEC_reference)
 							
-							#calculate the distance from this source to the second check star
+							#calculate the distance from this source to the reference star
 							angSep = 3600*math.degrees(math.acos(math.sin(d1)*math.sin(d2)+math.cos(d1)*math.cos(d2)*math.cos(ra1-ra2)))
 												
-							if angSep < maxDist and angSep<closestCheck2:
-								closestCheck2 = angSep
-								list[i][1]=closestCheck2
-								list[i][5]=output_string	
+							#If it's close enough, and closer than the closest source so far, make it the new best source
+							if angSep < maxDist and angSep<closestRef:
+								closestRef = angSep
+								list[i][1]=closestRef
+								list[i][3]=output_string	
+								
+							#Convert the coordinates to radians	
+							ra1 = math.radians(RA_check_1)
+							d1 = math.radians(DEC_check_1)
 							
-						
+							#calculate the distance from this source to the check star
+							angSep = 3600*math.degrees(math.acos(math.sin(d1)*math.sin(d2)+math.cos(d1)*math.cos(d2)*math.cos(ra1-ra2)))
+												
+							#If it's close enough, and closer than the closest source so far, make it the new best source
+							if angSep < maxDist and angSep<closestCheck1:
+								closestCheck1 = angSep
+								list[i][1]=closestCheck1
+								list[i][4]=output_string	
+							
+							#If there's a second check star
+							if RA_check_2 is not None:
+							
+								#Convert the coordinates to radians	
+								ra1 = math.radians(RA_check_2)
+								d1 = math.radians(DEC_check_2)
+								
+								#calculate the distance from this source to the second check star
+								angSep = 3600*math.degrees(math.acos(math.sin(d1)*math.sin(d2)+math.cos(d1)*math.cos(d2)*math.cos(ra1-ra2)))
+													
+								if angSep < maxDist and angSep<closestCheck2:
+									closestCheck2 = angSep
+									list[i][1]=closestCheck2
+									list[i][5]=output_string	
+								
+							
 							
 				#Next line		
 				lineNum=lineNum+1
