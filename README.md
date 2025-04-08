@@ -6,9 +6,9 @@ SourceLists.py then extracts specific sources from those APT source lists (a tar
 
 It can be used for quickly creating light curves of exoplanet transits, asteroid, variable stars... etc including uncertainties.
 
-To install astropy on LRC computers run C:\Python312\Scripts\pip install astropy or C:\Program Files\Python312\Scripts\pip install astropy.
+To install astropy on LRC computers run `C:\Python312\Scripts\pip install astropy` or `C:\Program Files\Python312\Scripts\pip install astropy`.
 
-On the LRC computers, APT can be found at C:\tools\APT_v3.0.8\APT_v3.0.8\APT.jar.
+On the LRC computers, APT can be found at `C:\tools\APT_v3.0.8\APT_v3.0.8\APT.jar.`
 
 ## APTbatch.py
 
