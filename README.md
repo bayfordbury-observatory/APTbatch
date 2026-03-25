@@ -8,7 +8,7 @@ It can be used for quickly creating light curves of exoplanet transits, asteroid
 
 To install astropy on LRC computers run `C:\Python312\Scripts\pip install astropy` or `C:\Program Files\Python312\Scripts\pip install astropy`.
 
-On the LRC computers, APT can be found at `C:\Portables\APT_v3.1.0\APT.jar.`
+
 
 ## APTbatch.py
 
@@ -20,7 +20,8 @@ Three variables must be edited in the script before use:
 
 - The directory containing your FITS files to be processed
 
-- The location of the APT.jar file (for PMB computers this will be "C:\Program Files (x86)\APT\APT.jar")
+- The location of the APT.jar file
+- - On PMB and LRC computers this will be "C:\Portables\APT_v3.1.0\APT.jar"
 
 - The location of the preferences file you've saved from APT
 
