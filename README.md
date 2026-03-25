@@ -22,6 +22,7 @@ Three variables must be edited in the script before use:
 
 - The location of the APT.jar file
 - - On PMB and LRC computers this will be "C:\Portables\APT_v3.1.0\APT.jar"
+- - On Spectra computers this will be "C:\ProgramData\APT\APT.jar"
 
 - The location of the preferences file you've saved from APT
 
